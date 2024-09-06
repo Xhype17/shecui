@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat with Gemini API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .chat-box {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+    .chat-history {
+      max-height: 300px;
+      overflow-y: scroll;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    .chat-entry {
+      margin: 10px 0;
+    }
+    .chat-entry.bot {
+      color: blue;
+    }
+    .chat-entry.user {
+      color: green;
+    }
+    .prompt-box {
+      display: flex;
+      margin-top: 10px;
+    }
+    .prompt-box input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .prompt-box button {
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="chat-box">
+    <h1>Ars-Bot</h1>
+    <div class="chat-history"></div>
+    <form class="prompt-box">
+      <input name="prompt" placeholder="Enter your message" type="text" required />
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
